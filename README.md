@@ -16,7 +16,14 @@ Falls der Befehl `docker` nicht erkannt wird:
 
 ### Anwendung starten
 
-Projekt starten:
+1. Repository klonen
+
+```bash
+git clone https://github.com/NabilAlsamaan/bahmann-healthmap.git
+cd bahmann-healthmap
+```
+
+1. Projekt starten:
 
 ```bash
 docker compose up --build
