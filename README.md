@@ -61,26 +61,28 @@ Die Architektur ist auf Skalierbarkeit, Sicherheit und Entwicklerfreundlichkeit 
 
 ---
 
-##  Lokales Setup (Docker)
+## Lokales Setup (Docker)
 
-Die Anwendung ist vollständig containerisiert. Es sind keine lokalen Installationen von Node.js oder MySQL erforderlich. Voraussetzung ist lediglich eine laufende **Docker**-Umgebung.
+Die Anwendung ist vollständig containerisiert. Es sind keine lokalen Installationen von Node.js oder MySQL erforderlich.
+
+Voraussetzung ist lediglich eine laufende Docker-Umgebung.
 
 Hinweis:
 
-Die Datenbank wird beim ersten Start automatisch initialisiert.
-Bei erneutem Ausführen von "docker compose up --build" werden die Daten zurückgesetzt.
+Die Datenbank wird beim ersten Start automatisch initialisiert.  
+Bei erneutem Ausführen von `docker compose up --build` werden die Daten zurückgesetzt.
 
-Für eine persistente Speicherung könnte ein Docker Volume verwendet werden.
+Für eine persistente Speicherung könnte ein Docker-Volume verwendet werden.
 
-1. **Repository klonen**
+1. Repository klonen
+```bash
+git clone <repository-url>
+cd bahmann-healthmap
+ ```
+
+2. **Container starten** 
    ```bash
-   git clone <repository-url>
-   cd bahmann-healthmap
-   ```
-
-2. **Container starten** (baut die Images und startet die Services im Hintergrund)
-   ```bash
-   docker-compose up -d --build
+   docker compose up --build
    ```
 
 3. **Anwendung aufrufen**
