@@ -1,5 +1,13 @@
 # HealthMap – Plattform zur Suche von DEXA- und Bluttest-Anbietern
 
+## Schnellstart
+
+Projekt starten:
+
+```bash
+docker compose up --build
+   ```
+
 Eine professionelle, interaktive Web-Anwendung zur Suche von Anbietern für DEXA Body Composition Scans und Blutuntersuchungen für Selbstzahler. Entwickelt als umfassende Lösung im Rahmen der Coding Challenge der **Bahmann Coaching GmbH**.
 
 Die HealthMap ermöglicht es Kunden, schnell und intuitiv die nächstgelegenen, verifizierten Partner-Praxen zu finden. Gleichzeitig bietet sie dem internen Team ein leistungsstarkes und abgesichertes Admin-Dashboard zur effizienten Verwaltung der Praxisdaten, inklusive Massenimport-Funktionen.
