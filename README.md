@@ -1,4 +1,4 @@
-# HealthMap
+# HealthMap – Plattform zur Suche von DEXA- und Bluttest-Anbietern
 
 Eine professionelle, interaktive Web-Anwendung zur Suche von Anbietern für DEXA Body Composition Scans und Blutuntersuchungen für Selbstzahler. Entwickelt als umfassende Lösung im Rahmen der Coding Challenge der **Bahmann Coaching GmbH**.
 
