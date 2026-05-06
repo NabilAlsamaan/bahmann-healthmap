@@ -105,7 +105,8 @@ function LocationButton({ setUserLocation, providers, setNearestProviderId }) {
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        const { latitude, longitude } = position.coords;
+        const { latitude, longitude, accuracy } = position.coords;
+
         setUserLocation([latitude, longitude]);
         map.flyTo([latitude, longitude], 15, { duration: 1.4 });
 
@@ -118,10 +119,20 @@ function LocationButton({ setUserLocation, providers, setNearestProviderId }) {
             .sort((a, b) => a.distance - b.distance)[0];
 
           setNearestProviderId(nearest.id);
-          alert(`Nächste Praxis: ${nearest.name} (${nearest.distance.toFixed(1)} km)`);
+
+          alert(
+            `Nächste Praxis: ${nearest.name} (${nearest.distance.toFixed(
+              1
+            )} km)\nStandortgenauigkeit: ca. ${Math.round(accuracy)} Meter`
+          );
         }
       },
-      () => alert("Standort konnte nicht gefunden werden.")
+      () => alert("Standort konnte nicht gefunden werden."),
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0,
+      }
     );
   };
 
@@ -131,7 +142,7 @@ function LocationButton({ setUserLocation, providers, setNearestProviderId }) {
       onClick={goToUserLocation}
       title="Mein Standort und nächste Praxis"
     >
-      ⌖
+      📍
     </button>
   );
 }

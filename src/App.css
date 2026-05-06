@@ -921,3 +921,17 @@ h1 {
 .sidebar-item {
   color: #16395f;
 }
+
+.menu-button {
+  color: #16395f !important;
+  font-weight: 700;
+}
+
+.close-sidebar {
+  color: #16395f !important;
+}
+
+.location-button {
+  color: #16395f !important;
+  font-weight: 700;
+}

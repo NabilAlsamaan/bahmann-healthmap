@@ -97,8 +97,8 @@ Bei erneutem Ausführen von `docker compose up --build` können Daten zurückges
 
 ## Standard-Login (Admin)
 
-- **Benutzername**: admin  
-- **Passwort**: admin123  
+- **Benutzername**: nabil 
+- **Passwort**: nabil123  
 
 ---
 
