@@ -910,3 +910,14 @@ h1 {
     border-radius: 22px;
   }
 }
+
+.sidebar,
+.sidebar h3,
+.sidebar button,
+.close-sidebar {
+  color: #16395f;
+}
+
+.sidebar-item {
+  color: #16395f;
+}

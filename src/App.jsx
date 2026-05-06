@@ -140,7 +140,7 @@ function App() {
   const [providers, setProviders] = useState([]);
   const [allPraxen, setAllPraxen] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Alle");
-  const [selectedRegion, setSelectedRegion] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("Region Hannover");
   const [filterOpen, setFilterOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [userLocation, setUserLocation] = useState(null);
@@ -1183,7 +1183,7 @@ function App() {
               onChange={(e) => {
                 const value = e.target.value;
 
-                if (value === "coming-soon") {
+                if (value !== "Region Hannover") {
                   setInfoPopup("region-soon");
                   return;
                 }
@@ -1192,7 +1192,6 @@ function App() {
                 setSelectedRegion(value);
               }}
             >
-              <option value="">Region auswählen</option>
               <option value="Region Hannover">Region Hannover</option>
               <option value="Braunschweig">Braunschweig</option>
               <option value="Osnabrück">Osnabrück</option>
@@ -1201,8 +1200,6 @@ function App() {
               <option value="Wolfsburg">Wolfsburg</option>
               <option value="Hildesheim">Hildesheim</option>
             </select>
-
-            <p className="coming-soon">Weitere Regionen können per CSV ergänzt werden.</p>
           </div>
         </div>
 
