@@ -14,7 +14,7 @@ import logo from "./assets/bahman-logo.png";
 
 
 
-const API_URL = "http://localhost:5000";
+const API_URL = `http://${window.location.hostname}:5000`;
 
 const authFetch = (url, options = {}) => {
   const token = localStorage.getItem("token");
